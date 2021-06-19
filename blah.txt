@@ -1,17 +1,5 @@
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.common.action_chains import ActionChains
-from selenium.webdriver.support.ui import Select
 
-import time
-import os
-from datetime import date
-
-classes_with_number_prefix = {
+{
 "Spanish 1 A" : "011 Spanish 1 A" ,
 "Spanish 1 B" : "011 Spanish 1 B" ,
 "Spanish 2 A" : "012 Spanish 2 A" ,
@@ -185,8 +173,8 @@ classes_with_number_prefix = {
 "MS Life Science B" : "207 MS Life Science B" ,
 "MS Physical Science A" : "208 MS Physical Science A" ,
 "MS Physical Science B" : "208 MS Physical Science B" ,
-"Physical Science 8 A" : "208 Physical Science 8 A" ,
-"Physical Science 8 B" : "208 Physical Science 8 B" ,
+"Physical Science 8 "A: "208 Physical Science 8 "A,
+"Physical Science 8 "B: "208 Physical Science 8 "B,
 "Earth Space Science A" : "211 Earth Space Science A" ,
 "Earth Space Science B" : "211 Earth Space Science B" ,
 "Conceptual Physics A" : "215 Conceptual Physics A" ,
@@ -268,7 +256,7 @@ classes_with_number_prefix = {
 "Research & Technical Writing A" : "322 Research & Technical Writing A" ,
 "Research & Technical Writing B" : "322 Research & Technical Writing B" ,
 "Poetry A" : "323 Poetry A" ,
-"Poetry B" : "323 Poetry B" ,
+"Poetry "B: "323 Poetry "B,
 "Creative Writing A" : "324 Creative Writing A" ,
 "Creative Writing B" : "324 Creative Writing B" ,
 "Ancient Civilizations A" : "410 Ancient Civilizations A" ,
@@ -393,90 +381,3 @@ classes_with_number_prefix = {
 "DJ Performing Arts B" : "970 DJ Performing Arts B" ,
 "Music Appreciation B" : "980 Music Appreciation B" ,
 }
-
-def get_full_class_name(plain_class_name):
-    try:
-        return classes_with_number_prefix[plain_class_name]
-    except:
-        return plain_class_name
-
-options = webdriver.ChromeOptions()
-options.add_argument("--start-maximized")
-
-# # To print Console.log Messages
-# d = DesiredCapabilities.CHROME
-# d['goog:loggingPrefs'] = { 'browser':'ALL' }
-# # print messages
-# for entry in browser.get_log('browser'):
-#     print(entry)
-# browser = webdriver.Chrome(executable_path='C:\\Users\\Andrew\\Documents\\automatic-enrollment-project\\chromedriver.exe',options=options, desired_capabilities=d)
-
-url = 'https://fusion.geniussis.com/PublicWelcome.aspx'
-browser = webdriver.Chrome(executable_path='C:\\Users\\Andrew\\Documents\\automatic-enrollment-project\\chromedriver.exe',options=options)
-# browser = webdriver.Chrome(executable_path='/home/drew/automatic-enrollment-project/chromedriver.exe')
-browser.get(url)
-
-username = browser.find_element_by_id("ctl00_centerLoginContent_tbLogin")
-password = browser.find_element_by_id("ctl00_centerLoginContent_tbPassword")
-
-username.send_keys(os.getenv('username_mat'))
-password.send_keys(os.getenv('pw_mat'))
-
-browser.find_element_by_id("ctl00_centerLoginContent_btnSignMeIn").click()
-
-
-browser.find_element_by_id("ctl00_ddChangeRole_chosen").click() # Roles Dropdown
-browser.find_element_by_xpath('//*[@id="ctl00_ddChangeRole_chosen"]/div/ul/li[1]').click() # Super User Role
-browser.get("https://fusion.geniussis.com/ActiveStudents.aspx") # Students Page
-browser.find_element_by_link_text('Practice, Student').click() # Desired Student
-browser.find_element_by_link_text('Enroll in Section').click() # Enroll in Section Page
-
-
-browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_ddTerm_chosen"]/a/span').click()
-browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_ddTerm_chosen"]/div/ul/li[2]').click()
-time.sleep(1)
-
-
-
-
-browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_tbCourse"]').click()
-browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_tbCourse"]').send_keys( get_full_class_name("US History A") ) # 
-
-time.sleep(1)
-browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_tbCourse"]').send_keys("\ue015") # down
-browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_tbCourse"]').send_keys("\ue004") # enter
-
-browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_ddSectionType_chosen"]').click() # tab
-browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_ddSectionType_chosen"]/div/div/input').click() # tab
-browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_ddSectionType_chosen"]/div/div/input').send_keys("FT") # FT 
-browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_ddSectionType_chosen"]/div/div/input').send_keys("\ue006") # enter
-
-browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_ddTeacher_chosen"]').click() # tab
-browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_ddTeacher_chosen"]/div/div/input').click() # tab
-browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_ddTeacher_chosen"]/div/div/input').send_keys("Lee") # FT 
-browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_ddTeacher_chosen"]/div/div/input').send_keys("\ue006") # enter
-
-browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_ddWeeks_chosen"]').click() # tab
-browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_ddWeeks_chosen"]/div/div/input').click() # tab
-browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_ddWeeks_chosen"]/div/div/input').send_keys("25") # FT 
-browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_ddWeeks_chosen"]/div/div/input').send_keys("\ue006") # enter
-
-today_date = date.today().strftime("%m/%d/%Y")
-today_date_plus_one_year = today_date[:-1] + str(int(today_date[-1:]) + 1)
-
-browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_tbSD"]').click() 
-browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_tbSD"]').send_keys(today_date) #  
-browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_tbSD"]').send_keys("\ue004") # 
-
-browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_tbED"]').click() 
-browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_tbED"]').send_keys(today_date_plus_one_year) #  
-browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_tbSD"]').send_keys("\ue004") # 
-
-browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_tbSecondaryName"]').click() 
-# browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_btnEnroll"]').click() 
-
-
-# browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_tbCourse"]').send_keys(Keys.DOWN) # down //*[@id="ctl00_ContentPlaceHolder1_ddTeacher_chosen"]/a/span
-# browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_tbCourse"]').send_keys(Keys.ENTER) # enter
-# browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_tbCourse"]').send_keys(Keys.TAB) # tab
-# browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_tbCourse"]').send_keys(Keys.TAB) # tab
