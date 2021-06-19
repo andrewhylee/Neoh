@@ -443,34 +443,34 @@ browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_tbCourse"]').c
 browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_tbCourse"]').send_keys( get_full_class_name("US History A") ) # 
 
 time.sleep(1)
-browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_tbCourse"]').send_keys("\ue015") # down
-browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_tbCourse"]').send_keys("\ue004") # enter
+browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_tbCourse"]').send_keys(Keys.DOWN) # down
+browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_tbCourse"]').send_keys(Keys.TAB) # enter
 
 browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_ddSectionType_chosen"]').click() # tab
 browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_ddSectionType_chosen"]/div/div/input').click() # tab
 browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_ddSectionType_chosen"]/div/div/input').send_keys("FT") # FT 
-browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_ddSectionType_chosen"]/div/div/input').send_keys("\ue006") # enter
+browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_ddSectionType_chosen"]/div/div/input').send_keys(Keys.ENTER) # enter
 
 browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_ddTeacher_chosen"]').click() # tab
 browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_ddTeacher_chosen"]/div/div/input').click() # tab
 browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_ddTeacher_chosen"]/div/div/input').send_keys("Lee") # FT 
-browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_ddTeacher_chosen"]/div/div/input').send_keys("\ue006") # enter
+browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_ddTeacher_chosen"]/div/div/input').send_keys(Keys.ENTER) # enter
 
 browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_ddWeeks_chosen"]').click() # tab
 browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_ddWeeks_chosen"]/div/div/input').click() # tab
 browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_ddWeeks_chosen"]/div/div/input').send_keys("25") # FT 
-browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_ddWeeks_chosen"]/div/div/input').send_keys("\ue006") # enter
+browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_ddWeeks_chosen"]/div/div/input').send_keys(Keys.ENTER) # enter
 
 today_date = date.today().strftime("%m/%d/%Y")
 today_date_plus_one_year = today_date[:-1] + str(int(today_date[-1:]) + 1)
 
 browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_tbSD"]').click() 
 browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_tbSD"]').send_keys(today_date) #  
-browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_tbSD"]').send_keys("\ue004") # 
+browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_tbSD"]').send_keys(Keys.TAB) # 
 
 browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_tbED"]').click() 
 browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_tbED"]').send_keys(today_date_plus_one_year) #  
-browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_tbSD"]').send_keys("\ue004") # 
+browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_tbSD"]').send_keys(Keys.TAB) # 
 
 browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_tbSecondaryName"]').click() 
 # browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_btnEnroll"]').click() 
