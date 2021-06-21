@@ -1,0 +1,930 @@
+[
+    {
+        "className": "Independent PE 1 Semester 2",
+        "sessionCount": 1,
+        "studentName": "Zoe Esposito",
+        "teacherName": "Kevin Riordan",
+        "curriculumLevel": "One Level",
+        "sessionNumber": 2
+    },
+    {
+        "className": "Executive Functioning/Organizational Skills",
+        "sessionCount": 25,
+        "studentName": "Meredith Moy",
+        "teacherName": "Kenneth Eisner",
+        "curriculumLevel": "One Level",
+        "sessionNumber": 24
+    },
+    {
+        "className": "Earth Science Semester 1",
+        "sessionCount": 30,
+        "studentName": "Lilly-June Gordon",
+        "teacherName": "Matthew Dito",
+        "curriculumLevel": "Middle School",
+        "sessionNumber": 29
+    },
+    {
+        "className": "United States History Semester 1",
+        "sessionCount": 30,
+        "studentName": "Tom Liu",
+        "teacherName": "James Swanson",
+        "curriculumLevel": "College Prep",
+        "sessionNumber": 14
+    },
+    {
+        "className": "French 3 Semester 2",
+        "sessionCount": 25,
+        "studentName": "Connor McDonald",
+        "teacherName": "Houria Benayyad",
+        "curriculumLevel": "College Prep",
+        "sessionNumber": 7
+    },
+    {
+        "className": "Government",
+        "sessionCount": 25,
+        "studentName": "Zach Cohn",
+        "teacherName": "Morgan Bender",
+        "curriculumLevel": "College Prep",
+        "sessionNumber": 25
+    },
+    {
+        "className": "MS Math Course 2 Semester 2",
+        "sessionCount": 30,
+        "studentName": "Isaac Huertas",
+        "teacherName": "Jeremy Brown-Adams",
+        "curriculumLevel": "Middle School",
+        "sessionNumber": 11
+    },
+    {
+        "className": "MS Foundations of Personal Fitness 6 Semester 1",
+        "sessionCount": 30,
+        "studentName": "Lola Esposito",
+        "teacherName": "Emma Preston",
+        "curriculumLevel": "Middle School",
+        "sessionNumber": 23
+    },
+    {
+        "className": "Algebra 2 with Trigonometry Semester 1",
+        "sessionCount": 25,
+        "studentName": "Sofia Brunetti",
+        "teacherName": "James Swanson",
+        "curriculumLevel": "College Prep",
+        "sessionNumber": 24
+    },
+    {
+        "className": "Poetry Semester 1",
+        "sessionCount": 25,
+        "studentName": "AJ Halpern",
+        "teacherName": "Jane Freeborn",
+        "curriculumLevel": "College Prep",
+        "sessionNumber": 15
+    },
+    {
+        "className": "Foundations of Personal Fitness 1 Semester 1",
+        "sessionCount": 25,
+        "studentName": "Alexa Brandmeyer",
+        "teacherName": "Kevin Riordan",
+        "curriculumLevel": "One Level",
+        "sessionNumber": 20
+    },
+    {
+        "className": "Life Skills Semester 2",
+        "sessionCount": 25,
+        "studentName": "Marcus Brem",
+        "teacherName": "Peter Greiner",
+        "curriculumLevel": "One Level",
+        "sessionNumber": 18
+    },
+    {
+        "className": "French 1 Semester 1",
+        "sessionCount": 25,
+        "studentName": "Melanie Sendrovitz",
+        "teacherName": "Houria Benayyad",
+        "curriculumLevel": "College Prep",
+        "sessionNumber": 5
+    },
+    {
+        "className": "Life Skills Semester 2",
+        "sessionCount": 25,
+        "studentName": "Aaron Rosenberg",
+        "teacherName": "Elizabeth Mcglone",
+        "curriculumLevel": "College Prep",
+        "sessionNumber": 21
+    },
+    {
+        "className": "Ancient Civilizations Semester 2",
+        "sessionCount": 25,
+        "studentName": "Lake Wasserman",
+        "teacherName": "Glennis Johnson",
+        "curriculumLevel": "College Prep",
+        "sessionNumber": 18
+    },
+    {
+        "className": "Ancient Civilizations Semester 2",
+        "sessionCount": 30,
+        "studentName": "Keenan Gamel",
+        "teacherName": "Kenneth Eisner",
+        "curriculumLevel": "College Prep",
+        "sessionNumber": 2
+    },
+    {
+        "className": "Physics Semester 2",
+        "sessionCount": 30,
+        "studentName": "Aj Kudler",
+        "teacherName": "Matthew Dito",
+        "curriculumLevel": "College Prep",
+        "sessionNumber": 29
+    },
+    {
+        "className": "Foundations of Personal Fitness 4 Semester 1",
+        "sessionCount": 25,
+        "studentName": "Alexander Maniatis",
+        "teacherName": "Chris Schneider",
+        "curriculumLevel": "One Level",
+        "sessionNumber": 24
+    },
+    {
+        "className": "Physics Semester 1",
+        "sessionCount": 25,
+        "studentName": "Sofia Brunetti",
+        "teacherName": "Gabrielle Legendre",
+        "curriculumLevel": "College Prep",
+        "sessionNumber": 21
+    },
+    {
+        "className": "Language Arts 6 Semester 2",
+        "sessionCount": 30,
+        "studentName": "Lola Esposito",
+        "teacherName": "Jami Simmons",
+        "curriculumLevel": "Middle School",
+        "sessionNumber": 20
+    },
+    {
+        "className": "Life Science Semester 2",
+        "sessionCount": 30,
+        "studentName": "Archie Bommer",
+        "teacherName": "Nicole Yu",
+        "curriculumLevel": "Middle School",
+        "sessionNumber": 16
+    },
+    {
+        "className": "French 1 Semester 1",
+        "sessionCount": 25,
+        "studentName": "Anna McCarthy",
+        "teacherName": "Houria Benayyad",
+        "curriculumLevel": "College Prep",
+        "sessionNumber": 15
+    },
+    {
+        "className": "Algebra 2 with Trigonometry Semester 1",
+        "sessionCount": 25,
+        "studentName": "Ben Barth",
+        "teacherName": "Steven Singer",
+        "curriculumLevel": "College Prep",
+        "sessionNumber": 23
+    },
+    {
+        "className": "Middle School Elective Semester 1",
+        "sessionCount": 30,
+        "studentName": "Carlota Lagarrigue-Espinosa",
+        "teacherName": "Drew Tirella",
+        "curriculumLevel": "Middle School",
+        "sessionNumber": 15
+    },
+    {
+        "className": "Personal Finance",
+        "sessionCount": 25,
+        "studentName": "Karina Green",
+        "teacherName": "Kevin Riordan",
+        "curriculumLevel": "One Level",
+        "sessionNumber": 23
+    },
+    {
+        "className": "Art Elective Semester 1",
+        "sessionCount": 25,
+        "studentName": "Zoe Siller",
+        "teacherName": "Willa Rudolph",
+        "curriculumLevel": "College Prep",
+        "sessionNumber": 12
+    },
+    {
+        "className": "English 11 Semester 2",
+        "sessionCount": 25,
+        "studentName": "Connor McDonald",
+        "teacherName": "Micki Halpern",
+        "curriculumLevel": "College Prep",
+        "sessionNumber": 9
+    },
+    {
+        "className": "World History Semester 1",
+        "sessionCount": 20,
+        "studentName": "Melanie Sendrovitz",
+        "teacherName": "Michael Brunner",
+        "curriculumLevel": "College Prep",
+        "sessionNumber": 6
+    },
+    {
+        "className": "English 8 Semester 2",
+        "sessionCount": 30,
+        "studentName": "Isaac Huertas",
+        "teacherName": "Tiffany Britto",
+        "curriculumLevel": "Middle School",
+        "sessionNumber": 25
+    },
+    {
+        "className": "Earth Science Semester 2",
+        "sessionCount": 30,
+        "studentName": "Lola Esposito",
+        "teacherName": "Gabrielle Legendre",
+        "curriculumLevel": "Middle School",
+        "sessionNumber": 8
+    },
+    {
+        "className": "Music Elective Semester 2",
+        "sessionCount": 25,
+        "studentName": "Cooper Kroll",
+        "teacherName": "Drew Tirella",
+        "curriculumLevel": "One Level",
+        "sessionNumber": 3
+    },
+    {
+        "className": "Marine Biology Semester 1",
+        "sessionCount": 25,
+        "studentName": "AJ Halpern",
+        "teacherName": "Houria Benayyad",
+        "curriculumLevel": "College Prep",
+        "sessionNumber": 14
+    },
+    {
+        "className": "English 7 Semester 2",
+        "sessionCount": 30,
+        "studentName": "Archie Bommer",
+        "teacherName": "Michael Brunner",
+        "curriculumLevel": "Middle School",
+        "sessionNumber": 16
+    },
+    {
+        "className": "United States History Semester 2",
+        "sessionCount": 25,
+        "studentName": "Alexa Brandmeyer",
+        "teacherName": "Jeremy Brown-Adams",
+        "curriculumLevel": "College Prep",
+        "sessionNumber": 20
+    },
+    {
+        "className": "Biology Semester 2",
+        "sessionCount": 25,
+        "studentName": "Marta Lagarrigue-Espinosa",
+        "teacherName": "Matthew Dito",
+        "curriculumLevel": "College Prep",
+        "sessionNumber": 17
+    },
+    {
+        "className": "Positive Psychology Semester 1",
+        "sessionCount": 30,
+        "studentName": "Tom Liu",
+        "teacherName": "Rochelle Kanet",
+        "curriculumLevel": "College Prep",
+        "sessionNumber": 12
+    },
+    {
+        "className": "Post Secondary Planning Package",
+        "sessionCount": 5,
+        "studentName": "Tehila Ostroff",
+        "teacherName": "Samantha Delgiudice",
+        "curriculumLevel": "One Level",
+        "sessionNumber": 4
+    },
+    {
+        "className": "English 8 Semester 2",
+        "sessionCount": 30,
+        "studentName": "Juliet Southern",
+        "teacherName": "Peter Greiner",
+        "curriculumLevel": "Middle School",
+        "sessionNumber": 29
+    },
+    {
+        "className": "Executive Functioning/Organizational Skills",
+        "sessionCount": 50,
+        "studentName": "Tehila Ostroff",
+        "teacherName": "Kenneth Eisner",
+        "curriculumLevel": "One Level",
+        "sessionNumber": 49
+    },
+    {
+        "className": "Calculus Semester 2",
+        "sessionCount": 30,
+        "studentName": "Rebecca Godsil-Freeman",
+        "teacherName": "Roanna Lin",
+        "curriculumLevel": "Honors",
+        "sessionNumber": 30
+    },
+    {
+        "className": "Life Skills Semester 1",
+        "sessionCount": 25,
+        "studentName": "Micah Leverenz",
+        "teacherName": "Jami Simmons",
+        "curriculumLevel": "College Prep",
+        "sessionNumber": 21
+    },
+    {
+        "className": "Precalculus Semester 1",
+        "sessionCount": 25,
+        "studentName": "Cooper Kroll",
+        "teacherName": "Gabrielle Legendre",
+        "curriculumLevel": "College Prep",
+        "sessionNumber": 23
+    },
+    {
+        "className": "Language Arts 7 Semester 1",
+        "sessionCount": 30,
+        "studentName": "Archie Bommer",
+        "teacherName": "Michael Brunner",
+        "curriculumLevel": "Middle School",
+        "sessionNumber": 16
+    },
+    {
+        "className": "Middle School Elective Semester 1",
+        "sessionCount": 30,
+        "studentName": "Meredith Moy",
+        "teacherName": "Emma Preston",
+        "curriculumLevel": "Middle School",
+        "sessionNumber": 27
+    },
+    {
+        "className": "English 7 Semester 2",
+        "sessionCount": 30,
+        "studentName": "Carlota Lagarrigue-Espinosa",
+        "teacherName": "Jane Freeborn",
+        "curriculumLevel": "Middle School",
+        "sessionNumber": 20
+    },
+    {
+        "className": "Graphic Design Semester 1",
+        "sessionCount": 25,
+        "studentName": "Ian Vicars-Harris",
+        "teacherName": "Willa Rudolph",
+        "curriculumLevel": "College Prep",
+        "sessionNumber": 14
+    },
+    {
+        "className": "Post Secondary Planning Package",
+        "sessionCount": 5,
+        "studentName": "James Weiner",
+        "teacherName": "Samantha Delgiudice",
+        "curriculumLevel": "One Level",
+        "sessionNumber": 3
+    },
+    {
+        "className": "English 9 Semester 1",
+        "sessionCount": 20,
+        "studentName": "Melanie Sendrovitz",
+        "teacherName": "Tiffany Britto",
+        "curriculumLevel": "College Prep",
+        "sessionNumber": 5
+    },
+    {
+        "className": "Executive Functioning/Organizational Skills",
+        "sessionCount": 60,
+        "studentName": "Isaac Huertas",
+        "teacherName": "Drew Tirella",
+        "curriculumLevel": "One Level",
+        "sessionNumber": 46
+    },
+    {
+        "className": "Calculus Semester 2",
+        "sessionCount": 25,
+        "studentName": "Jay Grinberg",
+        "teacherName": "Roanna Lin",
+        "curriculumLevel": "College Prep",
+        "sessionNumber": 19
+    },
+    {
+        "className": "Algebra 1B Semester 2",
+        "sessionCount": 25,
+        "studentName": "Alicia Orris-Maitland",
+        "teacherName": "Kenneth Eisner",
+        "curriculumLevel": "College Prep",
+        "sessionNumber": 4
+    },
+    {
+        "className": "Health",
+        "sessionCount": 25,
+        "studentName": "Leo DeNiro",
+        "teacherName": "Morgan Bender",
+        "curriculumLevel": "One Level",
+        "sessionNumber": 22
+    },
+    {
+        "className": "United States History Semester 1",
+        "sessionCount": 30,
+        "studentName": "Sofia Brunetti",
+        "teacherName": "Peter Cavicchio",
+        "curriculumLevel": "Honors",
+        "sessionNumber": 22
+    },
+    {
+        "className": "English 9 Semester 2",
+        "sessionCount": 25,
+        "studentName": "Leo Esposito",
+        "teacherName": "Peter Greiner",
+        "curriculumLevel": "College Prep",
+        "sessionNumber": 7
+    },
+    {
+        "className": "English 6 Semester 2",
+        "sessionCount": 30,
+        "studentName": "Lola Esposito",
+        "teacherName": "Nathaniel Rosenfield",
+        "curriculumLevel": "Middle School",
+        "sessionNumber": 25
+    },
+    {
+        "className": "English 11 Semester 2",
+        "sessionCount": 25,
+        "studentName": "Cooper Kroll",
+        "teacherName": "Tiffany Britto",
+        "curriculumLevel": "College Prep",
+        "sessionNumber": 5
+    },
+    {
+        "className": "World History Semester 2",
+        "sessionCount": 25,
+        "studentName": "Marta Lagarrigue-Espinosa",
+        "teacherName": "Jane Freeborn",
+        "curriculumLevel": "College Prep",
+        "sessionNumber": 19
+    },
+    {
+        "className": "MS Math Course 2 Semester 2",
+        "sessionCount": 30,
+        "studentName": "Carlota Lagarrigue-Espinosa",
+        "teacherName": "Rochelle Kanet",
+        "curriculumLevel": "Middle School",
+        "sessionNumber": 23
+    },
+    {
+        "className": "United States History Semester 1",
+        "sessionCount": 25,
+        "studentName": "Sofi Saba",
+        "teacherName": "Glennis Johnson",
+        "curriculumLevel": "College Prep",
+        "sessionNumber": 15
+    },
+    {
+        "className": "Biology Semester 1",
+        "sessionCount": 25,
+        "studentName": "Melanie Sendrovitz",
+        "teacherName": "Nicole Yu",
+        "curriculumLevel": "College Prep",
+        "sessionNumber": 8
+    },
+    {
+        "className": "Middle School Elective Semester 2",
+        "sessionCount": 30,
+        "studentName": "Juliet Southern",
+        "teacherName": "Tariq Alsabir",
+        "curriculumLevel": "One Level",
+        "sessionNumber": 26
+    },
+    {
+        "className": "Economics",
+        "sessionCount": 25,
+        "studentName": "Jay Grinberg",
+        "teacherName": "Michael Brunner",
+        "curriculumLevel": "College Prep",
+        "sessionNumber": 22
+    },
+    {
+        "className": "Environmental Science Semester 2",
+        "sessionCount": 25,
+        "studentName": "Leah Esther Ostroff",
+        "teacherName": "Gabrielle Legendre",
+        "curriculumLevel": "College Prep",
+        "sessionNumber": 19
+    },
+    {
+        "className": "Health",
+        "sessionCount": 25,
+        "studentName": "Micah Leverenz",
+        "teacherName": "Emma Preston",
+        "curriculumLevel": "One Level",
+        "sessionNumber": 13
+    },
+    {
+        "className": "Life Skills Semester 2",
+        "sessionCount": 25,
+        "studentName": "Zoe Esposito",
+        "teacherName": "Sarah Ladyman",
+        "curriculumLevel": "One Level",
+        "sessionNumber": 3
+    },
+    {
+        "className": "Biology Semester 2",
+        "sessionCount": 25,
+        "studentName": "Leo Esposito",
+        "teacherName": "Steven Singer",
+        "curriculumLevel": "College Prep",
+        "sessionNumber": 25
+    },
+    {
+        "className": "English 10 Semester 2",
+        "sessionCount": 25,
+        "studentName": "Marta Lagarrigue-Espinosa",
+        "teacherName": "Peter Greiner",
+        "curriculumLevel": "College Prep",
+        "sessionNumber": 22
+    },
+    {
+        "className": "MS Early US History Semester 2",
+        "sessionCount": 30,
+        "studentName": "Carlota Lagarrigue-Espinosa",
+        "teacherName": "Jami Simmons",
+        "curriculumLevel": "Middle School",
+        "sessionNumber": 16
+    },
+    {
+        "className": "English 12 Semester 1",
+        "sessionCount": 25,
+        "studentName": "Ian Vicars-Harris",
+        "teacherName": "Micki Halpern",
+        "curriculumLevel": "College Prep",
+        "sessionNumber": 19
+    },
+    {
+        "className": "Algebra 1 Semester 1",
+        "sessionCount": 25,
+        "studentName": "Melanie Sendrovitz",
+        "teacherName": "Rochelle Kanet",
+        "curriculumLevel": "College Prep",
+        "sessionNumber": 6
+    },
+    {
+        "className": "World History Semester 1",
+        "sessionCount": 25,
+        "studentName": "Zoe Esposito",
+        "teacherName": "Peter Cavicchio",
+        "curriculumLevel": "College Prep",
+        "sessionNumber": 6
+    },
+    {
+        "className": "Geometry Semester 2",
+        "sessionCount": 25,
+        "studentName": "Leo Esposito",
+        "teacherName": "Gabrielle Legendre",
+        "curriculumLevel": "College Prep",
+        "sessionNumber": 18
+    },
+    {
+        "className": "Executive Functioning/Organizational Skills",
+        "sessionCount": 25,
+        "studentName": "Cooper Kroll",
+        "teacherName": "Nathaniel Rosenfield",
+        "curriculumLevel": "One Level",
+        "sessionNumber": 3
+    },
+    {
+        "className": "Algebra 2 with Trigonometry Semester 2",
+        "sessionCount": 25,
+        "studentName": "Marta Lagarrigue-Espinosa",
+        "teacherName": "Jeremy Brown-Adams",
+        "curriculumLevel": "College Prep",
+        "sessionNumber": 19
+    },
+    {
+        "className": "MS Foundations of Personal Fitness 7 Semester 2",
+        "sessionCount": 30,
+        "studentName": "Carlota Lagarrigue-Espinosa",
+        "teacherName": "Leanne Canillas",
+        "curriculumLevel": "Middle School",
+        "sessionNumber": 19
+    },
+    {
+        "className": "Precalculus Semester 2",
+        "sessionCount": 25,
+        "studentName": "Nicole Black",
+        "teacherName": "Roanna Lin",
+        "curriculumLevel": "College Prep",
+        "sessionNumber": 23
+    },
+    {
+        "className": "Foundations of Personal Fitness 2 Semester 2",
+        "sessionCount": 25,
+        "studentName": "Tom Liu",
+        "teacherName": "Kevin Riordan",
+        "curriculumLevel": "One Level",
+        "sessionNumber": 10
+    },
+    {
+        "className": "MS Early US History Semester 2",
+        "sessionCount": 38,
+        "studentName": "Rhys Auerbach",
+        "teacherName": "Nathaniel Rosenfield",
+        "curriculumLevel": "Middle School",
+        "sessionNumber": 37
+    },
+    {
+        "className": "MS Math Course 1 Semester 2",
+        "sessionCount": 30,
+        "studentName": "Lola Esposito",
+        "teacherName": "Jeremy Brown-Adams",
+        "curriculumLevel": "Middle School",
+        "sessionNumber": 25
+    },
+    {
+        "className": "Physics Semester 2",
+        "sessionCount": 25,
+        "studentName": "Connor McDonald",
+        "teacherName": "Steven Singer",
+        "curriculumLevel": "College Prep",
+        "sessionNumber": 9
+    },
+    {
+        "className": "Geometry Semester 2",
+        "sessionCount": 25,
+        "studentName": "Alexa Brandmeyer",
+        "teacherName": "Matthew Dito",
+        "curriculumLevel": "College Prep",
+        "sessionNumber": 20
+    },
+    {
+        "className": "English 11 Semester 1",
+        "sessionCount": 30,
+        "studentName": "Tom Liu",
+        "teacherName": "Michael Brunner",
+        "curriculumLevel": "College Prep",
+        "sessionNumber": 27
+    },
+    {
+        "className": "United States History Semester 2",
+        "sessionCount": 25,
+        "studentName": "Connor McDonald",
+        "teacherName": "Glennis Johnson",
+        "curriculumLevel": "College Prep",
+        "sessionNumber": 11
+    },
+    {
+        "className": "United States History Semester 1",
+        "sessionCount": 30,
+        "studentName": "Tehila Ostroff",
+        "teacherName": "Peter Cavicchio",
+        "curriculumLevel": "College Prep",
+        "sessionNumber": 11
+    },
+    {
+        "className": "Language Arts 8 Semester 2",
+        "sessionCount": 30,
+        "studentName": "Isaac Huertas",
+        "teacherName": "Micki Halpern",
+        "curriculumLevel": "Middle School",
+        "sessionNumber": 30
+    },
+    {
+        "className": "Executive Functioning/Organizational Skills",
+        "sessionCount": 30,
+        "studentName": "Archie Bommer",
+        "teacherName": "Emma Preston",
+        "curriculumLevel": "One Level",
+        "sessionNumber": 17
+    },
+    {
+        "className": "Biology Semester 2",
+        "sessionCount": 25,
+        "studentName": "Alexa Brandmeyer",
+        "teacherName": "Nicole Yu",
+        "curriculumLevel": "College Prep",
+        "sessionNumber": 20
+    },
+    {
+        "className": "Geometry Semester 2",
+        "sessionCount": 30,
+        "studentName": "Juliet Southern",
+        "teacherName": "Gabrielle Legendre",
+        "curriculumLevel": "College Prep",
+        "sessionNumber": 28
+    },
+    {
+        "className": "Health",
+        "sessionCount": 25,
+        "studentName": "Tehila Ostroff",
+        "teacherName": "Kevin Riordan",
+        "curriculumLevel": "One Level",
+        "sessionNumber": 21
+    },
+    {
+        "className": "English 12 Semester 2",
+        "sessionCount": 25,
+        "studentName": "Jay Grinberg",
+        "teacherName": "Peter Cavicchio",
+        "curriculumLevel": "College Prep",
+        "sessionNumber": 22
+    },
+    {
+        "className": "English 12 Semester 2",
+        "sessionCount": 25,
+        "studentName": "Leah Esther Ostroff",
+        "teacherName": "Micki Halpern",
+        "curriculumLevel": "College Prep",
+        "sessionNumber": 19
+    },
+    {
+        "className": "Post Secondary Planning Package 25 Pack",
+        "sessionCount": 25,
+        "studentName": "Marcus Brem",
+        "teacherName": "Samantha Delgiudice",
+        "curriculumLevel": "One Level",
+        "sessionNumber": 20
+    },
+    {
+        "className": "MS Math Course 2 Semester 2",
+        "sessionCount": 30,
+        "studentName": "Archie Bommer",
+        "teacherName": "Rochelle Kanet",
+        "curriculumLevel": "Middle School",
+        "sessionNumber": 17
+    },
+    {
+        "className": "Executive Functioning/Organizational Skills",
+        "sessionCount": 25,
+        "studentName": "Alexa Brandmeyer",
+        "teacherName": "Nathaniel Rosenfield",
+        "curriculumLevel": "One Level",
+        "sessionNumber": 20
+    },
+    {
+        "className": "English 11 Semester 2",
+        "sessionCount": 25,
+        "studentName": "Zoe Siller",
+        "teacherName": "Tiffany Britto",
+        "curriculumLevel": "College Prep",
+        "sessionNumber": 15
+    },
+    {
+        "className": "Ancient Civilizations Semester 2",
+        "sessionCount": 25,
+        "studentName": "Leo Esposito",
+        "teacherName": "Peter Cavicchio",
+        "curriculumLevel": "College Prep",
+        "sessionNumber": 22
+    },
+    {
+        "className": "World History Semester 2",
+        "sessionCount": 25,
+        "studentName": "Cooper Kroll",
+        "teacherName": "Michael Brunner",
+        "curriculumLevel": "College Prep",
+        "sessionNumber": 5
+    },
+    {
+        "className": "MS French 2 Semester 2",
+        "sessionCount": 30,
+        "studentName": "Archie Bommer",
+        "teacherName": "Houria Benayyad",
+        "curriculumLevel": "Middle School",
+        "sessionNumber": 14
+    },
+    {
+        "className": "Integrated Chemistry & Physics Semester 2",
+        "sessionCount": 25,
+        "studentName": "Marta Lagarrigue-Espinosa",
+        "teacherName": "Matthew Dito",
+        "curriculumLevel": "College Prep",
+        "sessionNumber": 18
+    },
+    {
+        "className": "Executive Functioning/Organizational Skills",
+        "sessionCount": 10,
+        "studentName": "Jay Grinberg",
+        "teacherName": "Steven Singer",
+        "curriculumLevel": "One Level",
+        "sessionNumber": 5
+    },
+    {
+        "className": "American Sign Language 1 Semester 2",
+        "sessionCount": 25,
+        "studentName": "Zoe Mincheff",
+        "teacherName": "Jami Simmons",
+        "curriculumLevel": "College Prep",
+        "sessionNumber": 21
+    },
+    {
+        "className": "MS Ancient Civilizations Semester 2",
+        "sessionCount": 30,
+        "studentName": "Lola Esposito",
+        "teacherName": "Jeremy Brown-Adams",
+        "curriculumLevel": "Middle School",
+        "sessionNumber": 9
+    },
+    {
+        "className": "Foundations of Personal Fitness 1 Semester 1",
+        "sessionCount": 25,
+        "studentName": "Cooper Kroll",
+        "teacherName": "Leanne Canillas",
+        "curriculumLevel": "One Level",
+        "sessionNumber": 20
+    },
+    {
+        "className": "MS French 2 Semester 2",
+        "sessionCount": 30,
+        "studentName": "Carlota Lagarrigue-Espinosa",
+        "teacherName": "Houria Benayyad",
+        "curriculumLevel": "Middle School",
+        "sessionNumber": 22
+    },
+    {
+        "className": "MS Modern US History Semester 2",
+        "sessionCount": 30,
+        "studentName": "Isaac Huertas",
+        "teacherName": "Jami Simmons",
+        "curriculumLevel": "Middle School",
+        "sessionNumber": 29
+    },
+    {
+        "className": "Chemistry Semester 2",
+        "sessionCount": 30,
+        "studentName": "Tehila Ostroff",
+        "teacherName": "Gabrielle Legendre",
+        "curriculumLevel": "College Prep",
+        "sessionNumber": 5
+    },
+    {
+        "className": "MS Early US History Semester 2",
+        "sessionCount": 30,
+        "studentName": "Archie Bommer",
+        "teacherName": "Glennis Johnson",
+        "curriculumLevel": "Middle School",
+        "sessionNumber": 17
+    },
+    {
+        "className": "Foundations of Personal Fitness 1 Semester 1",
+        "sessionCount": 25,
+        "studentName": "Marta Lagarrigue-Espinosa",
+        "teacherName": "Leanne Canillas",
+        "curriculumLevel": "One Level",
+        "sessionNumber": 18
+    },
+    {
+        "className": "United States History Semester 2",
+        "sessionCount": 25,
+        "studentName": "Leah Esther Ostroff",
+        "teacherName": "Morgan Bender",
+        "curriculumLevel": "College Prep",
+        "sessionNumber": 15
+    },
+    {
+        "className": "French 3 Semester 2",
+        "sessionCount": 25,
+        "studentName": "Marta Lagarrigue-Espinosa",
+        "teacherName": "Houria Benayyad",
+        "curriculumLevel": "College Prep",
+        "sessionNumber": 14
+    },
+    {
+        "className": "Biology Semester 2",
+        "sessionCount": 25,
+        "studentName": "Vivian Colburn",
+        "teacherName": "Steven Singer",
+        "curriculumLevel": "College Prep",
+        "sessionNumber": 25
+    },
+    {
+        "className": "Life Skills Semester 2",
+        "sessionCount": 25,
+        "studentName": "Alexander Maniatis",
+        "teacherName": "Chris Schneider",
+        "curriculumLevel": "College Prep",
+        "sessionNumber": 25
+    },
+    {
+        "className": "English 12 Semester 2",
+        "sessionCount": 25,
+        "studentName": "Zoe Esposito",
+        "teacherName": "Nathaniel Rosenfield",
+        "curriculumLevel": "College Prep",
+        "sessionNumber": 3
+    },
+    {
+        "className": "Post Secondary Planning Package",
+        "sessionCount": 5,
+        "studentName": "Leah Esther Ostroff",
+        "teacherName": "Samantha Delgiudice",
+        "curriculumLevel": "One Level",
+        "sessionNumber": 3
+    },
+    {
+        "className": "French 1 Semester 2",
+        "sessionCount": 25,
+        "studentName": "Quino Nevares",
+        "teacherName": "Houria Benayyad",
+        "curriculumLevel": "College Prep",
+        "sessionNumber": 21
+    },
+    {
+        "className": "Algebra 2 with Trigonometry Semester 2",
+        "sessionCount": 25,
+        "studentName": "Ben Barth",
+        "teacherName": "Steven Singer",
+        "curriculumLevel": "College Prep",
+        "sessionNumber": 1
+    }
+]

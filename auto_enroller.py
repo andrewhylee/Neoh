@@ -10,9 +10,10 @@ from selenium.webdriver.support.ui import Select
 import time
 import os
 from datetime import date
-import jsontodf
+import json_to_df
 
-df_m_full = jsontodf.get_matrix_df("06_20_2021")
+todays_date = date.today().strftime("%m_%d_%Y")
+df_m_full = json_to_df.get_matrix_df(todays_date)
 df_m_full = df_m_full.loc[df_m_full["sessionNumber"] == 1]
 
 print(df_m_full)
@@ -506,18 +507,9 @@ def automate_enrollment(browser, student_name, teacher_name, class_name, number_
 def main():
     br = set_up_chrome_driver()
     go_to_genius_as_superuser(br)
-    # for index, row in df_m_full.iterrows():
-    #     automate_enrollment(br, row.studentName, row.teacherName, row.className, row.sessionCount)
-    # for i in range(4):
-    automate_enrollment(br, "Student Practice", "Andrew Lee", "TM", 25)
-    automate_enrollment(br, "Student Practice", "Andrew Lee", "Music Elective", 25, "Song Writing")
+    for index, row in df_m_full.iterrows():
+        automate_enrollment(br, row.studentName, row.teacherName, row.className, row.sessionCount)
+    time.sleep(3)
 
 if __name__ == '__main__':
     main()
-
-
-
-# browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_tbCourse"]').send_keys(Keys.DOWN) # down //*[@id="ctl00_ContentPlaceHolder1_ddTeacher_chosen"]/a/span
-# browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_tbCourse"]').send_keys(Keys.ENTER) # enter
-# browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_tbCourse"]').send_keys(Keys.TAB) 
-# browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_tbCourse"]').send_keys(Keys.TAB) 

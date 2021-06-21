@@ -40,7 +40,7 @@ def get_genius_df(given_date):
 
 
 def get_matrix_df(given_date):
-    today_date = given_date # example: "5_22"
+    today_date = given_date # example: "5_22_2021"
 
     # ----- PART 1: Get Matrix Data into Dataframe
     with open (f"CleanedClassesFromMatrix{today_date}.json", "r") as myfile:
