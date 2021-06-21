@@ -4,16 +4,16 @@ import pandas as pd
 import numpy as np
 import os
 
-date = "5_22"
+date = "06_21_2021"
 
 def get_genius_df(given_date):
     today_date = given_date # example: "5_22"
 
-    # ----- PART 2: Get Genius Data into Dataframe
+    # ----- PART 1: Get Genius Data into Dataframe
     df_g = pd.read_csv(f"ClassesFromGenius{today_date}.csv")
 
 
-    # ----- PART 3: Genius Dataframe Modifications
+    # ----- PART 2: Genius Dataframe Modifications
     def put_name_in_first_last_order(name):
         proper_name = " ".join(reversed(name.split(', ')) )
         return proper_name
@@ -42,7 +42,7 @@ def get_genius_df(given_date):
 def get_matrix_df(given_date):
     today_date = given_date # example: "5_22_2021"
 
-    # ----- PART 1: Get Matrix Data into Dataframe
+    # ----- PART 3: Get Matrix Data into Dataframe
     with open (f"CleanedClassesFromMatrix{today_date}.json", "r") as myfile:
         data = json.load(myfile)
     df_m = pd.DataFrame(data)
@@ -147,21 +147,17 @@ def main():
     edge_case_rows_indexes.append(*df_merged[ (df_merged["className"] == "Art Elective") & (df_merged["studentName"] == "Gunner Momsen") & (df_merged["teacherName"] == "Willa Rudolph") ].index.values)
 
     # ------ Currently Being Subbed
-    edge_case_rows_indexes = [*edge_case_rows_indexes, *df_merged[ (df_merged["teacherName"] == "Gabrielle Legendre") ].index.values]
+    # edge_case_rows_indexes = [*edge_case_rows_indexes, *df_merged[ (df_merged["teacherName"] == "Gabrielle Legendre") ].index.values]
+    # df_merged.drop(edge_case_rows_indexes, inplace=True)
 
-    df_merged.drop(edge_case_rows_indexes, inplace=True)
-
-    # print(df_merged)
-    # df_mi = df.merge(df2, how = 'inner' ,indicator=True)
-    # print(df_m)
-
-    # ----- PART 6: Debugging Merge
+    # ------ PART 6: Debugging Merge
     # field = "studentName"
     # value = "Abigail Davie"
     # print(df_g.loc[df_g[field] == value])
     # print(df_m.loc[df_m[field] == value])
     # print(df_merged.loc[df_merged[field] == value])
 
+    # ------ PART 7: Print Results
     # print(df_g)
     # print(df_m)
     # print(df_merged)
