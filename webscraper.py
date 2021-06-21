@@ -32,25 +32,25 @@ browser.find_element_by_xpath("/html/body/nav/div/ul/li[2]/a").click()
 
 # -- GO TO CAMPUS SCHEDULE --
 try: 
-    campusSched = WebDriverWait(browser, 10).until(
+    campusSched = WebDriverWait(browser, 8).until(
         EC.presence_of_element_located( (By.CSS_SELECTOR , '#app > div > div:nth-child(2) > div > div.one-col-page-layout.no-print > div.accordion.panel-group > div:nth-child(2) > div.panel-heading > div > a') )
     )
     campusSched.click()
 finally:
     pass
 
-# -- GO TO NEXT WEEK (NOW SPRING BREAK) --
-try: 
-    nextbtn = WebDriverWait(browser, 10).until(
-        EC.presence_of_element_located( (By.XPATH , '/html/body/div/div/div[2]/div/div[2]/div[2]/div[2]/div[2]/div/div/div[1]/div[1]/div[2]/div/a[2]') )
-    )
-    nextbtn.click()
-finally:
-    pass
+# # -- GO TO NEXT WEEK (NOW SPRING BREAK) --
+# try: 
+#     nextbtn = WebDriverWait(browser, 10).until(
+#         EC.presence_of_element_located( (By.XPATH , '/html/body/div/div/div[2]/div/div[2]/div[2]/div[2]/div[2]/div/div/div[1]/div[1]/div[2]/div/a[2]') )
+#     )
+#     nextbtn.click()
+# finally:
+#     pass
 
 # -- GO TO TEACHERS --
 try: 
-    teachers = WebDriverWait(browser, 10).until(
+    teachers = WebDriverWait(browser, 8).until(
         EC.presence_of_element_located( (By.XPATH , '//*[@id="app"]/div/div[2]/div/div[2]/div[2]/div[2]/div[2]/div/div/div[1]/div[2]/div[1]/div[1]/div/button') )
     )
     teachers.click()
@@ -64,57 +64,3 @@ for i in range(1, 65):
     teach.click()
     time.sleep(3)
 
-# # -- Teacher 1: Andrew Lee --
-# try: 
-#     teacher1 = WebDriverWait(browser, 10).until(
-#         EC.presence_of_element_located( (By.XPATH , '//*[@id="app"]/div/div[2]/div/div[2]/div[2]/div[2]/div[2]/div/div/div[1]/div[2]/div[1]/div[1]/div/div/ul/li[1]/div/label') )
-#     )
-#     teacher1.click()
-# finally:
-#     pass
-
-# time.sleep(3)
-
-# # -- Teacher 2: Asim Ali --
-# try: 
-#     teacher2 = WebDriverWait(browser, 10).until(
-#         EC.presence_of_element_located( (By.XPATH , '//*[@id="app"]/div/div[2]/div/div[2]/div[2]/div[2]/div[2]/div/div/div[1]/div[2]/div[1]/div[1]/div/div/ul/li[2]/div/label') )
-#     )
-#     teacher2.click()
-# finally:
-#     pass
-
-# time.sleep(3)
-
-# # -- Teacher 3: Aurea PerezPadial --
-# try: 
-#     teacher3 = WebDriverWait(browser, 10).until(
-#         EC.presence_of_element_located( (By.XPATH , '//*[@id="app"]/div/div[2]/div/div[2]/div[2]/div[2]/div[2]/div/div/div[1]/div[2]/div[1]/div[1]/div/div/ul/li[3]/div/label') )
-#     )
-#     teacher3.click()
-# finally:
-#     pass
-# time.sleep(3)
-# try: 
-#     teacher3 = WebDriverWait(browser, 10).until(
-#         EC.presence_of_element_located( (By.XPATH , '//*[@id="app"]/div/div[2]/div/div[2]/div[2]/div[2]/div[2]/div/div/div[1]/div[2]/div[1]/div[1]/div/div/ul/li[4]/div/label') )
-#     )
-#     teacher3.click()
-# finally:
-#     pass
-# time.sleep(3)
-# try: 
-#     teacher3 = WebDriverWait(browser, 10).until(
-#         EC.presence_of_element_located( (By.XPATH , '//*[@id="app"]/div/div[2]/div/div[2]/div[2]/div[2]/div[2]/div/div/div[1]/div[2]/div[1]/div[1]/div/div/ul/li[5]/div/label') )
-#     )
-#     teacher3.click()
-# finally:
-#     pass
-# time.sleep(3)
-# try: 
-#     teacher3 = WebDriverWait(browser, 10).until(
-#         EC.presence_of_element_located( (By.XPATH , '//*[@id="app"]/div/div[2]/div/div[2]/div[2]/div[2]/div[2]/div/div/div[1]/div[2]/div[1]/div[1]/div/div/ul/li[58]/div/label') )
-#     )
-#     teacher3.click()
-# finally:
-#     pass

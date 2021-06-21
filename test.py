@@ -10,6 +10,14 @@ from selenium.webdriver.support.ui import Select
 import time
 import os
 from datetime import date
+import jsontodf
+
+df_m_full = jsontodf.get_matrix_df("06_20_2021")
+df_m_full = df_m_full.loc[df_m_full["sessionNumber"] == 1]
+
+print(df_m_full)
+
+# quit()
 
 classes_with_number_prefix = {
 "Spanish 1 A" : "011 Spanish 1 A" ,
@@ -400,83 +408,116 @@ def get_full_class_name(plain_class_name):
     except:
         return plain_class_name
 
-options = webdriver.ChromeOptions()
-options.add_argument("--start-maximized")
-
-# # To print Console.log Messages
-# d = DesiredCapabilities.CHROME
-# d['goog:loggingPrefs'] = { 'browser':'ALL' }
-# # print messages
-# for entry in browser.get_log('browser'):
-#     print(entry)
-# browser = webdriver.Chrome(executable_path='C:\\Users\\Andrew\\Documents\\automatic-enrollment-project\\chromedriver.exe',options=options, desired_capabilities=d)
-
-url = 'https://fusion.geniussis.com/PublicWelcome.aspx'
-browser = webdriver.Chrome(executable_path='C:\\Users\\Andrew\\Documents\\automatic-enrollment-project\\chromedriver.exe',options=options)
-# browser = webdriver.Chrome(executable_path='/home/drew/automatic-enrollment-project/chromedriver.exe')
-browser.get(url)
-
-username = browser.find_element_by_id("ctl00_centerLoginContent_tbLogin")
-password = browser.find_element_by_id("ctl00_centerLoginContent_tbPassword")
-
-username.send_keys(os.getenv('username_mat'))
-password.send_keys(os.getenv('pw_mat'))
-
-browser.find_element_by_id("ctl00_centerLoginContent_btnSignMeIn").click()
+def set_up_chrome_driver():
+    options = webdriver.ChromeOptions()
+    options.add_argument("--start-maximized")
+    browser = webdriver.Chrome(executable_path='C:\\Users\\Andrew\\Documents\\automatic-enrollment-project\\chromedriver.exe',options=options)
+    return browser
 
 
-browser.find_element_by_id("ctl00_ddChangeRole_chosen").click() # Roles Dropdown
-browser.find_element_by_xpath('//*[@id="ctl00_ddChangeRole_chosen"]/div/ul/li[1]').click() # Super User Role
-browser.get("https://fusion.geniussis.com/ActiveStudents.aspx") # Students Page
-browser.find_element_by_link_text('Practice, Student').click() # Desired Student
-browser.find_element_by_link_text('Enroll in Section').click() # Enroll in Section Page
+def go_to_genius_as_superuser(browser):
+    url = 'https://fusion.geniussis.com/PublicWelcome.aspx'
+    browser.get(url)
+
+    # Sign in with userID and PW
+    username = browser.find_element_by_id("ctl00_centerLoginContent_tbLogin")
+    password = browser.find_element_by_id("ctl00_centerLoginContent_tbPassword")
+    username.send_keys(os.getenv('username_mat'))
+    password.send_keys(os.getenv('pw_mat'))
+    browser.find_element_by_id("ctl00_centerLoginContent_btnSignMeIn").click()
+    
+    browser.find_element_by_id("ctl00_ddChangeRole_chosen").click() # Roles Dropdown
+    browser.find_element_by_xpath('//*[@id="ctl00_ddChangeRole_chosen"]/div/ul/li[1]').click() # Super User Role
 
 
-browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_ddTerm_chosen"]/a/span').click()
-browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_ddTerm_chosen"]/div/ul/li[2]').click()
-time.sleep(1)
+def automate_enrollment(browser, student_name, teacher_name, class_name, number_of_sessions, secondary_name = ""):
+    teacher_last_name = teacher_name.split(' ')[1]
+    split_student_name = student_name.split(" ")
+    last_name_first_student_name = "".join([split_student_name[1], ", ", split_student_name[0]])
+    section_type = "FT"
+
+    switcher={
+        "Music Elective":'Song Production',
+        "Art Elective":'Abstract Art',
+        "Computer Elective":'App Development',
+        }
+    secondary_name = switcher.get(class_name,"")
+
+    browser.get("https://fusion.geniussis.com/ActiveStudents.aspx") # Students Page
+    browser.find_element_by_link_text(last_name_first_student_name).click() # Desired Student
+    browser.find_element_by_link_text('Enroll in Section').click() # Enroll in Section Page
+
+    browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_ddTerm_chosen"]/a/span').click()
+    browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_ddTerm_chosen"]/div/ul/li[2]').click()
+    time.sleep(1)
+
+    if class_name == "TM":
+        browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_tbCourse"]').click()
+        browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_tbCourse"]').send_keys( "TM (Template)" ) 
+        time.sleep(1)
+        browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_tbCourse"]').send_keys(Keys.DOWN)
+        browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_tbCourse"]').send_keys(Keys.DOWN)
+        browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_tbCourse"]').send_keys(Keys.DOWN)
+        browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_tbCourse"]').send_keys(Keys.TAB) 
+        section_type = "TM"
+    else:
+        browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_tbCourse"]').click()
+        browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_tbCourse"]').send_keys( get_full_class_name(class_name) ) 
+        time.sleep(1)
+        browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_tbCourse"]').send_keys(Keys.DOWN)
+        browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_tbCourse"]').send_keys(Keys.TAB) 
+
+    if class_name.split(" ")[-1] == "Elective":
+        browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_tbSecondaryName"]').click() 
+        browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_tbSecondaryName"]').send_keys(secondary_name)
+        browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_tbSecondaryName"]').send_keys(Keys.TAB)
 
 
+    browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_ddSectionType_chosen"]').click() 
+    browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_ddSectionType_chosen"]/div/div/input').click() 
+    browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_ddSectionType_chosen"]/div/div/input').send_keys(section_type)
+    browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_ddSectionType_chosen"]/div/div/input').send_keys(Keys.ENTER)
 
+    browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_ddTeacher_chosen"]').click() 
+    browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_ddTeacher_chosen"]/div/div/input').click() 
+    browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_ddTeacher_chosen"]/div/div/input').send_keys(teacher_last_name) 
+    browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_ddTeacher_chosen"]/div/div/input').send_keys(Keys.ENTER)
 
-browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_tbCourse"]').click()
-browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_tbCourse"]').send_keys( get_full_class_name("US History A") ) # 
+    browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_ddWeeks_chosen"]').click() 
+    browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_ddWeeks_chosen"]/div/div/input').click()
+    browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_ddWeeks_chosen"]/div/div/input').send_keys(number_of_sessions) 
+    browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_ddWeeks_chosen"]/div/div/input').send_keys(Keys.ENTER)
 
-time.sleep(1)
-browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_tbCourse"]').send_keys(Keys.DOWN) # down
-browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_tbCourse"]').send_keys(Keys.TAB) # enter
+    today_date = date.today().strftime("%m/%d/%Y")
+    today_date_plus_one_year = today_date[:-1] + str(int(today_date[-1:]) + 1)
 
-browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_ddSectionType_chosen"]').click() # tab
-browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_ddSectionType_chosen"]/div/div/input').click() # tab
-browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_ddSectionType_chosen"]/div/div/input').send_keys("FT") # FT 
-browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_ddSectionType_chosen"]/div/div/input').send_keys(Keys.ENTER) # enter
+    browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_tbSD"]').click() 
+    browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_tbSD"]').send_keys(today_date) #  
+    browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_tbSD"]').send_keys(Keys.TAB) # 
 
-browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_ddTeacher_chosen"]').click() # tab
-browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_ddTeacher_chosen"]/div/div/input').click() # tab
-browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_ddTeacher_chosen"]/div/div/input').send_keys("Lee") # FT 
-browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_ddTeacher_chosen"]/div/div/input').send_keys(Keys.ENTER) # enter
+    browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_tbED"]').click() 
+    browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_tbED"]').send_keys(today_date_plus_one_year) #  
+    browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_tbSD"]').send_keys(Keys.TAB) # 
 
-browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_ddWeeks_chosen"]').click() # tab
-browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_ddWeeks_chosen"]/div/div/input').click() # tab
-browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_ddWeeks_chosen"]/div/div/input').send_keys("25") # FT 
-browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_ddWeeks_chosen"]/div/div/input').send_keys(Keys.ENTER) # enter
+    browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_tbSecondaryName"]').click() 
+    browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_btnEnroll"]').click() 
+    time.sleep(1)
 
-today_date = date.today().strftime("%m/%d/%Y")
-today_date_plus_one_year = today_date[:-1] + str(int(today_date[-1:]) + 1)
+def main():
+    br = set_up_chrome_driver()
+    go_to_genius_as_superuser(br)
+    # for index, row in df_m_full.iterrows():
+    #     automate_enrollment(br, row.studentName, row.teacherName, row.className, row.sessionCount)
+    # for i in range(4):
+    automate_enrollment(br, "Student Practice", "Andrew Lee", "TM", 25)
+    automate_enrollment(br, "Student Practice", "Andrew Lee", "Music Elective", 25, "Song Writing")
 
-browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_tbSD"]').click() 
-browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_tbSD"]').send_keys(today_date) #  
-browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_tbSD"]').send_keys(Keys.TAB) # 
+if __name__ == '__main__':
+    main()
 
-browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_tbED"]').click() 
-browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_tbED"]').send_keys(today_date_plus_one_year) #  
-browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_tbSD"]').send_keys(Keys.TAB) # 
-
-browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_tbSecondaryName"]').click() 
-# browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_btnEnroll"]').click() 
 
 
 # browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_tbCourse"]').send_keys(Keys.DOWN) # down //*[@id="ctl00_ContentPlaceHolder1_ddTeacher_chosen"]/a/span
 # browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_tbCourse"]').send_keys(Keys.ENTER) # enter
-# browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_tbCourse"]').send_keys(Keys.TAB) # tab
-# browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_tbCourse"]').send_keys(Keys.TAB) # tab
+# browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_tbCourse"]').send_keys(Keys.TAB) 
+# browser.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_tbCourse"]').send_keys(Keys.TAB) 
