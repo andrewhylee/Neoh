@@ -45,7 +45,7 @@ def get_matrix_df(given_date):
     # ----- PART 1: Get Matrix Data into Dataframe
     with open (f"CleanedClassesFromMatrix{today_date}.json", "r") as myfile:
         data = json.load(myfile)
-    df_m = pd.DataFrame(data["classes"])
+    df_m = pd.DataFrame(data)
 
     # ----- PART 4: Matrix Dataframe Modifications
     matrix_className_conv_entire = {
